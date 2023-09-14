@@ -35,9 +35,10 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach ($posts as $item)
             <tr>
-                <td>{{$loop->iteration}}</td>
+                <td>{{$i}}</td>
                 <td>{{$item->gadgetType}}</td>
                 <td>{{$item->price}}</td>
                 <td>
@@ -45,6 +46,7 @@
                     <a href="{{route('gadget.edit', $item->id)}}">edit</a>
                 </td>
             </tr>
+            @php $i++ @endphp
             @endforeach
         </tbody>
     </table>

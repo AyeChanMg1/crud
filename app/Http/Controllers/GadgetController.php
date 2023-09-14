@@ -10,6 +10,10 @@ class GadgetController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    //  onlyTrashed
+    // withTrashed
+
     public function index()
     {
         $data = [
@@ -38,6 +42,8 @@ class GadgetController extends Controller
             'gadgetType' => 'required',
             'price' => 'required',
         ]);
+
+
 
         Gadget::create([
             'gadgetType' => $request->input('gadgetType'),

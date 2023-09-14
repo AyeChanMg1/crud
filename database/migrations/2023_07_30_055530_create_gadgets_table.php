@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('gadgetType', 100)->nullable();
             $table->string('price', 100)->nullable();
+            $table->softDeletes();
         });
     }
 
