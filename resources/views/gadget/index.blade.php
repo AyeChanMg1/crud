@@ -35,6 +35,7 @@
             </tr>
         </thead>
         <tbody>
+            {{-- loop iteration testing for paginate --}}
             @php $i = 1; @endphp
             @foreach ($posts as $item)
             <tr>
